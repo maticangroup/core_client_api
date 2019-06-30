@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Models\Authentication;
+namespace Matican\Models\Authentication;
 
 
-use App\Core\Concepts\CRUDActions;
-use App\Core\DataTypes\URL;
+use Matican\Core\Concepts\CRUDActions;
+use Matican\Core\DataTypes\URL;
 
 class Permission extends CRUDActions
 {

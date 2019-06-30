@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Models\Delivery;
+namespace Matican\Models\Delivery;
 
 
-use App\Core\Concepts\CRUDActions;
-use App\Core\DataTypes\MachineName;
+use Matican\Core\Concepts\CRUDActions;
+use Matican\Core\DataTypes\MachineName;
 
 class DispatchStatus extends CRUDActions
 {

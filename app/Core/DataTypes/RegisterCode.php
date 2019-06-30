@@ -6,7 +6,7 @@
  * Time: 11:15 AM
  */
 
-namespace App\Core\DataTypes;
+namespace Matican\Core\DataTypes;
 
 
 class RegisterCode extends DataTypes

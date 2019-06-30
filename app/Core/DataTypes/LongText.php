@@ -6,7 +6,7 @@
  * Time: 10:42
  */
 
-namespace App\Core\DataTypes;
+namespace Matican\Core\DataTypes;
 
 
 class LongText extends DataTypes

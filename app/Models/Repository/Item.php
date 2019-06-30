@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Models\Repository;
+namespace Matican\Models\Repository;
 
-use App\Core\Concepts\CRUDActions;
-use App\Core\DataTypes\DateTime;
+use Matican\Core\Concepts\CRUDActions;
+use Matican\Core\DataTypes\DateTime;
 
 class Item extends CRUDActions
 {

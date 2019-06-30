@@ -6,7 +6,7 @@
  * Time: 13:01
  */
 
-namespace App\Core\DataTypes;
+namespace Matican\Core\DataTypes;
 
 
 class CouponSerial extends DataTypes

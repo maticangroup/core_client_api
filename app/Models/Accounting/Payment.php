@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Models\Accounting;
+namespace Matican\Models\Accounting;
 
-use App\Core\Concepts\CRUDActions;
-use App\Models\Repository\Company;
-use App\Models\Repository\Person;
-use App\Core\DataTypes\DateTime;
-use App\Core\DataTypes\FollowToken;
-use App\Core\DataTypes\Money;
+use Matican\Core\Concepts\CRUDActions;
+use Matican\Models\Repository\Company;
+use Matican\Models\Repository\Person;
+use Matican\Core\DataTypes\DateTime;
+use Matican\Core\DataTypes\FollowToken;
+use Matican\Core\DataTypes\Money;
 
 
 class Payment extends CRUDActions

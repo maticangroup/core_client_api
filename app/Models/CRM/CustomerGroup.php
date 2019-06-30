@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Models\CRM;
+namespace Matican\Models\CRM;
 
 
-use App\Core\Concepts\CRUDActions;
-use App\Core\DataTypes\DateTime;
-use App\Core\DataTypes\Text;
-use App\Models\Repository\Person;
+use Matican\Core\Concepts\CRUDActions;
+use Matican\Core\DataTypes\DateTime;
+use Matican\Core\DataTypes\Text;
+use Matican\Models\Repository\Person;
 
 class CustomerGroup extends CRUDActions
 {

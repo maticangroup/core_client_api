@@ -6,7 +6,7 @@
  * Time: 10:50
  */
 
-namespace App\Core\Transaction;
+namespace Matican\Core\Transaction;
 
 
 class Entity

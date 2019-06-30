@@ -1,16 +1,16 @@
 <?php
 
-namespace App\Models\Sale;
+namespace Matican\Models\Sale;
 
-use App\Core\Concepts\CRUDActions;
-use App\Core\DataTypes\Color;
-use App\Models\Repository\Company;
-use App\Models\Repository\Guarantee;
-use App\Models\Repository\Item;
-use App\Models\Repository\ItemColor;
-use App\Core\DataTypes\DateTime;
-use App\Core\DataTypes\Money;
-use App\Core\DataTypes\Serial;
+use Matican\Core\Concepts\CRUDActions;
+use Matican\Core\DataTypes\Color;
+use Matican\Models\Repository\Company;
+use Matican\Models\Repository\Guarantee;
+use Matican\Models\Repository\Item;
+use Matican\Models\Repository\ItemColor;
+use Matican\Core\DataTypes\DateTime;
+use Matican\Core\DataTypes\Money;
+use Matican\Core\DataTypes\Serial;
 
 class Product extends CRUDActions
 {

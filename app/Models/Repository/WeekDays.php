@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Models\Repository;
+namespace Matican\Models\Repository;
 
-use App\Core\Concepts\CRUDActions;
-use App\Core\DataTypes\MachineName;
-use App\Models\Delivery\DeliveryMethod;
-use App\Models\Delivery\Queue;
+use Matican\Core\Concepts\CRUDActions;
+use Matican\Core\DataTypes\MachineName;
+use Matican\Models\Delivery\DeliveryMethod;
+use Matican\Models\Delivery\Queue;
 
 class WeekDays extends CRUDActions
 {

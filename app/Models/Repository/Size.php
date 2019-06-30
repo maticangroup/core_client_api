@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Models\Repository;
+namespace Matican\Models\Repository;
 
-use App\Core\Concepts\CRUDActions;
-use App\Models\Sale\SaleOrder;
+use Matican\Core\Concepts\CRUDActions;
+use Matican\Models\Sale\SaleOrder;
 
 
 class Size extends CRUDActions

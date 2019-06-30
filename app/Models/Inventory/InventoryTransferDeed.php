@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Models\Inventory;
+namespace Matican\Models\Inventory;
 
-use App\Core\Concepts\CRUDActions;
-use App\Models\Repository\Person;
-use App\Models\Sale\Shelve;
-use App\Core\DataTypes\DateTime;
-use App\Core\DataTypes\Text;
+use Matican\Core\Concepts\CRUDActions;
+use Matican\Models\Repository\Person;
+use Matican\Models\Sale\Shelve;
+use Matican\Core\DataTypes\DateTime;
+use Matican\Core\DataTypes\Text;
 
 class InventoryTransferDeed extends CRUDActions
 {

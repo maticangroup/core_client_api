@@ -6,7 +6,7 @@
  * Time: 10:55
  */
 
-namespace App\Core\DataTypes;
+namespace Matican\Core\DataTypes;
 
 
 class BankAccount extends DataTypes

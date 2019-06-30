@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Models\Repository;
+namespace Matican\Models\Repository;
 
 
-use App\Core\Concepts\CRUDActions;
+use Matican\Core\Concepts\CRUDActions;
 
 class GeoPoint extends CRUDActions
 {

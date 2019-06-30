@@ -6,7 +6,7 @@
  * Time: 14:45
  */
 
-namespace App\Core\DataTypes;
+namespace Matican\Core\DataTypes;
 
 
 class Password extends DataTypes

@@ -1,17 +1,19 @@
 <?php
 
-namespace App;
+namespace Matican;
 
 
-use App\Actions\Inventory\InventoryActions;
-use App\Models\Inventory\Inventory;
-use App\Models\Repository\Person;
+
+use Matican\Core\Transaction\Request;
 
 class Application
 {
 
     public static function Start()
     {
+
+        $request = new Request("testServer","testentity","testaction");
+        $request->send();
 //        InventoryActions::set_inventory_keeper(1, new Person());
 //       Person::read();
 //        $person = new Person();
@@ -26,7 +28,7 @@ class Application
          * *************** This is an example of using the request class *******************
          */
         /*
-         * 1 - Create a new instance of "App\Core\Transaction\Request"
+         * 1 - Create a new instance of "Matican\Core\Transaction\Request"
          */
 //        $request = new Request("Server", "Entity", "Action");
         /*

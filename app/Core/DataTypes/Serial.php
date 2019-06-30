@@ -6,7 +6,7 @@
  * Time: 3:52 PM
  */
 
-namespace App\Core\DataTypes;
+namespace Matican\Core\DataTypes;
 
 
 class Serial extends DataTypes

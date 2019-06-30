@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Models\Delivery;
+namespace Matican\Models\Delivery;
 
-use App\Core\Concepts\CRUDActions;
-use App\Models\Repository\Location;
-use App\Models\Repository\Person;
-use App\Models\Repository\Size;
-use App\Models\Sale\SaleOrder;
-use App\Core\DataTypes\DateTime;
-use App\Core\DataTypes\Money;
+use Matican\Core\Concepts\CRUDActions;
+use Matican\Models\Repository\Location;
+use Matican\Models\Repository\Person;
+use Matican\Models\Repository\Size;
+use Matican\Models\Sale\SaleOrder;
+use Matican\Core\DataTypes\DateTime;
+use Matican\Core\DataTypes\Money;
 
 class Dispatch extends CRUDActions
 {

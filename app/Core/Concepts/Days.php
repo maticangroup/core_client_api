@@ -6,7 +6,7 @@
  * Time: 17:18
  */
 
-namespace App\Core\Concepts;
+namespace Matican\Core\Concepts;
 
 
 abstract class Days

@@ -6,7 +6,7 @@
  * Time: 14:09
  */
 
-namespace App\Core;
+namespace Matican\Core;
 
 
 class Config

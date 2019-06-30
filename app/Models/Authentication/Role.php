@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Models\Authentication;
+namespace Matican\Models\Authentication;
 
-use App\Core\Concepts\CRUDActions;
-use App\Models\Repository\Person;
-use App\Core\DataTypes\DateTime;
+use Matican\Core\Concepts\CRUDActions;
+use Matican\Models\Repository\Person;
+use Matican\Core\DataTypes\DateTime;
 
 class Role extends CRUDActions
 {

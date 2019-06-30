@@ -6,7 +6,7 @@
  * Time: 6:44 PM
  */
 
-namespace App\Core\DataTypes;
+namespace Matican\Core\DataTypes;
 
 
 class FollowToken extends DataTypes

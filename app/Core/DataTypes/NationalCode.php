@@ -6,7 +6,7 @@
  * Time: 10:50
  */
 
-namespace App\Core\DataTypes;
+namespace Matican\Core\DataTypes;
 
 
 class NationalCode extends DataTypes

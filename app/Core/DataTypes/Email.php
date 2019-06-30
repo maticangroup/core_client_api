@@ -6,7 +6,7 @@
  * Time: 10:43
  */
 
-namespace App\Core\DataTypes;
+namespace Matican\Core\DataTypes;
 
 
 class Email extends DataTypes

@@ -6,7 +6,7 @@
  * Time: 12:40 PM
  */
 
-namespace App\Core\DataTypes;
+namespace Matican\Core\DataTypes;
 
 
 class PhonePrefix extends DataTypes

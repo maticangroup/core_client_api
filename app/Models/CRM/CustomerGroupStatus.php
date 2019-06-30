@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Models\CRM;
+namespace Matican\Models\CRM;
 
 
-use App\Core\Concepts\CRUDActions;
-use App\Core\DataTypes\MachineName;
+use Matican\Core\Concepts\CRUDActions;
+use Matican\Core\DataTypes\MachineName;
 
 class CustomerGroupStatus extends CRUDActions
 {

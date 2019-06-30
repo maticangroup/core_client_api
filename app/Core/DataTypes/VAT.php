@@ -6,7 +6,7 @@
  * Time: 10:58
  */
 
-namespace App\Core\DataTypes;
+namespace Matican\Core\DataTypes;
 
 
 class VAT extends DataTypes

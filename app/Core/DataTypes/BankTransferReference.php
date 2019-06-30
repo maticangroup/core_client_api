@@ -6,7 +6,7 @@
  * Time: 11:41
  */
 
-namespace App\Core\DataTypes;
+namespace Matican\Core\DataTypes;
 
 
 class BankTransferReference extends DataTypes

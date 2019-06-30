@@ -6,7 +6,7 @@
  * Time: 5:39 PM
  */
 
-namespace App\Core\DataTypes;
+namespace Matican\Core\DataTypes;
 
 
 class DateTime  extends DataTypes

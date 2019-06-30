@@ -6,7 +6,7 @@
  * Time: 11:59
  */
 
-namespace App\Core\Concepts;
+namespace Matican\Core\Concepts;
 
 
 class Keeper

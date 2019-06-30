@@ -6,7 +6,7 @@
  * Time: 11:15
  */
 
-namespace App\Core\DataTypes;
+namespace Matican\Core\DataTypes;
 
 
 class Quantity extends DataTypes

@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Models\Authentication;
+namespace Matican\Models\Authentication;
 
-use App\Core\Concepts\CRUDActions;
-use App\Models\Repository\Person;
-use App\Core\DataTypes\DateTime;
-use App\Core\DataTypes\Hash;
-use App\Core\DataTypes\Mobile;
+use Matican\Core\Concepts\CRUDActions;
+use Matican\Models\Repository\Person;
+use Matican\Core\DataTypes\DateTime;
+use Matican\Core\DataTypes\Hash;
+use Matican\Core\DataTypes\Mobile;
 
 class User extends CRUDActions
 {

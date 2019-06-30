@@ -6,7 +6,7 @@
  * Time: 10:51
  */
 
-namespace App\Core\DataTypes;
+namespace Matican\Core\DataTypes;
 
 
 class Mobile extends DataTypes

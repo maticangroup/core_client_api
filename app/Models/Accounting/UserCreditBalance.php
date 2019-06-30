@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Models\Accounting;
+namespace Matican\Models\Accounting;
 
-use App\Core\Concepts\CRUDActions;
-use App\Models\Repository\Person;
-use App\Core\DataTypes\Money;
+use Matican\Core\Concepts\CRUDActions;
+use Matican\Models\Repository\Person;
+use Matican\Core\DataTypes\Money;
 
 
 class UserCreditBalance extends CRUDActions

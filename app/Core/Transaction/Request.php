@@ -6,10 +6,10 @@
  * Time: 10:51
  */
 
-namespace App\Core\Transaction;
+namespace Matican\Core\Transaction;
 
 
-use App\Core\Config;
+use Matican\Core\Config;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use ReflectionClass;
@@ -78,6 +78,8 @@ class Request
             $this->getEntity() . '/' .
             $this->getAction();
         $client = new Client();
+        print_r($url);
+        die;
         try {
             $response = new Response(
                 $client->request(

@@ -6,7 +6,7 @@
  * Time: 11:16 AM
  */
 
-namespace App\Core\DataTypes;
+namespace Matican\Core\DataTypes;
 
 
 class EconomicCode extends DataTypes

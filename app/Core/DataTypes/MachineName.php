@@ -6,7 +6,7 @@
  * Time: 10:57
  */
 
-namespace App\Core\DataTypes;
+namespace Matican\Core\DataTypes;
 
 
 class MachineName extends DataTypes

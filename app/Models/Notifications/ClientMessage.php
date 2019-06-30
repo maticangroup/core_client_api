@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Models\Notifications;
+namespace Matican\Models\Notifications;
 
-use App\Core\Concepts\CRUDActions;
-use App\Models\Authentication\Client;
-use App\Models\Repository\Person;
-use App\Core\DataTypes\DateTime;
-use App\Core\DataTypes\Text;
+use Matican\Core\Concepts\CRUDActions;
+use Matican\Models\Authentication\Client;
+use Matican\Models\Repository\Person;
+use Matican\Core\DataTypes\DateTime;
+use Matican\Core\DataTypes\Text;
 
 class ClientMessage extends CRUDActions
 {

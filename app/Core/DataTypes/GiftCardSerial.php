@@ -6,7 +6,7 @@
  * Time: 14:43
  */
 
-namespace App\Core\DataTypes;
+namespace Matican\Core\DataTypes;
 
 
 class GiftCardSerial extends DataTypes

@@ -6,19 +6,19 @@
  * Time: 08:47
  */
 
-namespace App\Actions\Inventory;
+namespace Matican\Actions\Inventory;
 
 
-use App\Core\Concepts\CRUDActions;
-use App\Core\Transaction\Request;
-use App\Models\Repository\Person;
+use Matican\Core\Concepts\CRUDActions;
+use Matican\Core\Transaction\Request;
+use Matican\Models\Repository\Person;
 
 class InventoryActions extends CRUDActions
 {
     /**
      * @param integer $inventoryID
      * @param Person $person
-     * @return \App\Core\Transaction\Response|string
+     * @return \Matican\Core\Transaction\Response|string
      * @throws \ReflectionException
      */
     public static function set_inventory_keeper($inventoryID, Person $person)
@@ -31,7 +31,7 @@ class InventoryActions extends CRUDActions
 
     /**
      * @param integer $inventoryID
-     * @return \App\Core\Transaction\Response|string
+     * @return \Matican\Core\Transaction\Response|string
      */
     public static function get_inventory_keeper($inventoryID)
     {
@@ -43,7 +43,7 @@ class InventoryActions extends CRUDActions
     /**
      * @param $inventoryID
      * @param $status_machine_name
-     * @return \App\Core\Transaction\Response|string
+     * @return \Matican\Core\Transaction\Response|string
      */
     public static function set_status($inventoryID, $status_machine_name)
     {

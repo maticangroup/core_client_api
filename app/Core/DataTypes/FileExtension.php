@@ -6,7 +6,7 @@
  * Time: 20:05
  */
 
-namespace App\Core\DataTypes;
+namespace Matican\Core\DataTypes;
 
 
 class FileExtension extends DataTypes

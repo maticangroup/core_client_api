@@ -6,7 +6,7 @@
  * Time: 11:43
  */
 
-namespace App\Core\Transaction;
+namespace Matican\Core\Transaction;
 
 
 class Method

@@ -6,7 +6,7 @@
  * Time: 14:48
  */
 
-namespace App\Core\DataTypes;
+namespace Matican\Core\DataTypes;
 
 
 class IP extends DataTypes

@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Models\Inventory;
+namespace Matican\Models\Inventory;
 
-use App\Core\Concepts\CRUDActions;
-use App\Models\Repository\Location;
-use App\Models\Repository\Person;
-use App\Models\Repository\Telephone;
-use App\Models\Sale\ShelveDeed;
+use Matican\Core\Concepts\CRUDActions;
+use Matican\Models\Repository\Location;
+use Matican\Models\Repository\Person;
+use Matican\Models\Repository\Telephone;
+use Matican\Models\Sale\ShelveDeed;
 
 class Inventory
 {

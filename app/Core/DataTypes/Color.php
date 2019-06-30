@@ -6,7 +6,7 @@
  * Time: 10:10
  */
 
-namespace App\Core\DataTypes;
+namespace Matican\Core\DataTypes;
 
 
 class Color extends DataTypes

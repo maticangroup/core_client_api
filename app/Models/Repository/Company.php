@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Models\Repository;
+namespace Matican\Models\Repository;
 
-use App\Core\Concepts\CRUDActions;
-use App\Core\DataTypes\EconomicCode;
-use App\Core\DataTypes\Email;
-use App\Core\DataTypes\NationalCode;
-use App\Core\DataTypes\RegisterCode;
+use Matican\Core\Concepts\CRUDActions;
+use Matican\Core\DataTypes\EconomicCode;
+use Matican\Core\DataTypes\Email;
+use Matican\Core\DataTypes\NationalCode;
+use Matican\Core\DataTypes\RegisterCode;
 
 class Company extends CRUDActions
 {

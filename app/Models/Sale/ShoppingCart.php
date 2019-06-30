@@ -6,11 +6,11 @@
  * Time: 7:02 PM
  */
 
-namespace App\Models\Sale;
+namespace Matican\Models\Sale;
 
 
-use App\Core\Concepts\CRUDActions;
-use App\Models\Repository\Person;
+use Matican\Core\Concepts\CRUDActions;
+use Matican\Models\Repository\Person;
 
 class ShoppingCart extends CRUDActions
 {

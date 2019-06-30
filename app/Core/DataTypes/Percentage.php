@@ -6,7 +6,7 @@
  * Time: 12:54
  */
 
-namespace App\Core\DataTypes;
+namespace Matican\Core\DataTypes;
 
 
 class Percentage extends DataTypes

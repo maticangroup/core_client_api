@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Models\Delivery;
+namespace Matican\Models\Delivery;
 
-use App\Core\Concepts\CRUDActions;
-use App\Models\Repository\Size;
-use App\Models\Repository\WeekDays;
-use App\Core\DataTypes\Money;
-use App\Core\DataTypes\Text;
+use Matican\Core\Concepts\CRUDActions;
+use Matican\Models\Repository\Size;
+use Matican\Models\Repository\WeekDays;
+use Matican\Core\DataTypes\Money;
+use Matican\Core\DataTypes\Text;
 
 class DeliveryMethod extends CRUDActions
 {

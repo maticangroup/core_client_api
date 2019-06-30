@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Models\Sale;
+namespace Matican\Models\Sale;
 
-use App\Core\Concepts\CRUDActions;
-use App\Models\Delivery\Dispatch;
-use App\Models\Repository\Person;
-use App\Core\DataTypes\DateTime;
-use App\Core\DataTypes\Money;
-use App\Models\Repository\Size;
+use Matican\Core\Concepts\CRUDActions;
+use Matican\Models\Delivery\Dispatch;
+use Matican\Models\Repository\Person;
+use Matican\Core\DataTypes\DateTime;
+use Matican\Core\DataTypes\Money;
+use Matican\Models\Repository\Size;
 
 class SaleOrder extends CRUDActions
 {

@@ -6,10 +6,10 @@
  * Time: 11:34 AM
  */
 
-namespace App\Models\Repository\FlexibleContent;
+namespace Matican\Models\Repository\FlexibleContent;
 
 
-use App\Core\Concepts\CRUDActions;
+use Matican\Core\Concepts\CRUDActions;
 
 class FlexibleContent extends CRUDActions
 {

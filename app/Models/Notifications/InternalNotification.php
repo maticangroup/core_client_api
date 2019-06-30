@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Models\Notifications;
+namespace Matican\Models\Notifications;
 
-use App\Core\Concepts\CRUDActions;
-use App\Models\Repository\Person;
-use App\Core\DataTypes\Text;
+use Matican\Core\Concepts\CRUDActions;
+use Matican\Models\Repository\Person;
+use Matican\Core\DataTypes\Text;
 
 class InternalNotification extends CRUDActions
 {

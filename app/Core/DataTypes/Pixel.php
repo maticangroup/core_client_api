@@ -6,7 +6,7 @@
  * Time: 19:56
  */
 
-namespace App\Core\DataTypes;
+namespace Matican\Core\DataTypes;
 
 
 class Pixel extends DataTypes

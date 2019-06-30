@@ -6,7 +6,7 @@
  * Time: 09:46
  */
 
-namespace App\Models\Repository;
+namespace Matican\Models\Repository;
 
 
 class Product

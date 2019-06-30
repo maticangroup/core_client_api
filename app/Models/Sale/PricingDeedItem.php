@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Models\Sale;
+namespace Matican\Models\Sale;
 
 
-use App\Core\Concepts\CRUDActions;
-use App\Core\DataTypes\Money;
+use Matican\Core\Concepts\CRUDActions;
+use Matican\Core\DataTypes\Money;
 
 class PricingDeedItem extends CRUDActions
 {

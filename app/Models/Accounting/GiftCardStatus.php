@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Models\Accounting;
+namespace Matican\Models\Accounting;
 
 
 
-use App\Core\Concepts\CRUDActions;
-use App\Core\DataTypes\MachineName;
+use Matican\Core\Concepts\CRUDActions;
+use Matican\Core\DataTypes\MachineName;
 
 class GiftCardStatus extends CRUDActions
 {

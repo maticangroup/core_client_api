@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Models\CRM;
+namespace Matican\Models\CRM;
 
-use App\Core\Concepts\CRUDActions;
-use App\Models\Repository\Person;
+use Matican\Core\Concepts\CRUDActions;
+use Matican\Models\Repository\Person;
 
 class Invitation extends CRUDActions
 {

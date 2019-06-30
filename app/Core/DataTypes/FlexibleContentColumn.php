@@ -6,7 +6,7 @@
  * Time: 10:38
  */
 
-namespace App\Core\DataTypes;
+namespace Matican\Core\DataTypes;
 
 
 class FlexibleContentColumn

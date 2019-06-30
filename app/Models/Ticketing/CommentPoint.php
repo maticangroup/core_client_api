@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Models\Ticketing;
+namespace Matican\Models\Ticketing;
 
 
-use App\Core\Concepts\CRUDActions;
+use Matican\Core\Concepts\CRUDActions;
 
 class CommentPoint extends CRUDActions
 {

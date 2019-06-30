@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Models\Delivery;
+namespace Matican\Models\Delivery;
 
-use App\Core\Concepts\CRUDActions;
-use App\Models\Repository\District;
-use App\Models\Repository\Person;
+use Matican\Core\Concepts\CRUDActions;
+use Matican\Models\Repository\District;
+use Matican\Models\Repository\Person;
 
 class DeliveryPerson extends CRUDActions
 {

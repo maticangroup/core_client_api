@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Models\Notifications;
+namespace Matican\Models\Notifications;
 
 
-use App\Core\Concepts\CRUDActions;
-use App\Core\DataTypes\DateTime;
-use App\Core\DataTypes\Text;
+use Matican\Core\Concepts\CRUDActions;
+use Matican\Core\DataTypes\DateTime;
+use Matican\Core\DataTypes\Text;
 
 class EmailLog extends CRUDActions
 {

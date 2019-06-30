@@ -6,7 +6,7 @@
  * Time: 11:12 AM
  */
 
-namespace App\Core\DataTypes;
+namespace Matican\Core\DataTypes;
 
 
 class Time extends DataTypes

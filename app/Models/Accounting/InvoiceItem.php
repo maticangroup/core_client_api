@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Models\Accounting;
+namespace Matican\Models\Accounting;
 
 
-use App\Core\Concepts\CRUDActions;
-use App\Core\DataTypes\Money;
-use App\Core\DataTypes\Quantity;
+use Matican\Core\Concepts\CRUDActions;
+use Matican\Core\DataTypes\Money;
+use Matican\Core\DataTypes\Quantity;
 
 class InvoiceItem extends CRUDActions
 {

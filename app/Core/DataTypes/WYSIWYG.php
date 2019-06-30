@@ -6,7 +6,7 @@
  * Time: 09:30
  */
 
-namespace App\Core\DataTypes;
+namespace Matican\Core\DataTypes;
 
 
 class WYSIWYG extends DataTypes

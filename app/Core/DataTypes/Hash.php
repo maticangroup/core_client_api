@@ -6,7 +6,7 @@
  * Time: 14:49
  */
 
-namespace App\Core\DataTypes;
+namespace Matican\Core\DataTypes;
 
 
 class Hash extends DataTypes

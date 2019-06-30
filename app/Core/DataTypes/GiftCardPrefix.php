@@ -6,7 +6,7 @@
  * Time: 14:42
  */
 
-namespace App\Core\DataTypes;
+namespace Matican\Core\DataTypes;
 
 
 class GiftCardPrefix extends DataTypes

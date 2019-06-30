@@ -1,4 +1,4 @@
 <?php
 require_once "vendor/autoload.php";
 
-\App\Application::Start();
+\Matican\Application::Start();

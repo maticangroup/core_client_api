@@ -6,7 +6,7 @@
  * Time: 12:33
  */
 
-namespace App\Core\DataTypes;
+namespace Matican\Core\DataTypes;
 
 
 class CommentContent extends DataTypes

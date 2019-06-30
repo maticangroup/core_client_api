@@ -6,11 +6,11 @@
  * Time: 12:24
  */
 
-namespace App\Core\Concepts;
+namespace Matican\Core\Concepts;
 
 
-use App\Core\DataTypes\MachineName;
-use App\Core\DataTypes\Text;
+use Matican\Core\DataTypes\MachineName;
+use Matican\Core\DataTypes\Text;
 
 class Status
 {

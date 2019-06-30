@@ -6,7 +6,7 @@
  * Time: 09:54
  */
 
-namespace App\Core\DataTypes;
+namespace Matican\Core\DataTypes;
 
 
 class FlexibleContent extends DataTypes

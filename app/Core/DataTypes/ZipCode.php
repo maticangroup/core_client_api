@@ -6,7 +6,7 @@
  * Time: 10:37
  */
 
-namespace App\Core\DataTypes;
+namespace Matican\Core\DataTypes;
 
 
 class ZipCode extends DataTypes

@@ -6,7 +6,7 @@
  * Time: 11:16
  */
 
-namespace App\Core\Transaction;
+namespace Matican\Core\Transaction;
 
 
 class Query

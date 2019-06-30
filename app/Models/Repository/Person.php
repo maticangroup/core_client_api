@@ -1,19 +1,19 @@
 <?php
 
-namespace App\Models\Repository;
+namespace Matican\Models\Repository;
 
 
-use App\Core\Concepts\CRUDActions;
-use App\Core\DataTypes\Date;
-use App\Core\DataTypes\Email;
-use App\Core\DataTypes\Mobile;
-use App\Core\DataTypes\NationalCode;
-use App\Core\DataTypes\Text;
-use App\Models\Accounting\CouponGroup;
-use App\Models\Accounting\CouponUsage;
-use App\Models\Accounting\UserCreditBalance;
-use App\Models\Authentication\Client;
-use App\Models\CRM\CustomerGroup;
+use Matican\Core\Concepts\CRUDActions;
+use Matican\Core\DataTypes\Date;
+use Matican\Core\DataTypes\Email;
+use Matican\Core\DataTypes\Mobile;
+use Matican\Core\DataTypes\NationalCode;
+use Matican\Core\DataTypes\Text;
+use Matican\Models\Accounting\CouponGroup;
+use Matican\Models\Accounting\CouponUsage;
+use Matican\Models\Accounting\UserCreditBalance;
+use Matican\Models\Authentication\Client;
+use Matican\Models\CRM\CustomerGroup;
 
 class Person extends CRUDActions
 {

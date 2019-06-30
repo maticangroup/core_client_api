@@ -6,7 +6,7 @@
  * Time: 10:29
  */
 
-namespace App\Core\DataTypes;
+namespace Matican\Core\DataTypes;
 
 
 class Barcode extends DataTypes

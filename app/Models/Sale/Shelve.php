@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Models\Sale;
+namespace Matican\Models\Sale;
 
-use App\Core\Concepts\CRUDActions;
-use App\Models\Inventory\InventoryTransferDeed;
-use App\Models\Repository\Person;
+use Matican\Core\Concepts\CRUDActions;
+use Matican\Models\Inventory\InventoryTransferDeed;
+use Matican\Models\Repository\Person;
 
 class Shelve extends CRUDActions
 {

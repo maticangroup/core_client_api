@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\Media;
+namespace Matican\Models\Media;
 
 
 class File

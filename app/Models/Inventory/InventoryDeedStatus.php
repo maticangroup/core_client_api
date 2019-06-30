@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Models\Inventory;
+namespace Matican\Models\Inventory;
 
 
-use App\Core\Concepts\CRUDActions;
-use App\Core\DataTypes\MachineName;
+use Matican\Core\Concepts\CRUDActions;
+use Matican\Core\DataTypes\MachineName;
 
 class InventoryDeedStatus extends CRUDActions
 {

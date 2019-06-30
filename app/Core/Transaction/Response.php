@@ -6,7 +6,7 @@
  * Time: 11:12
  */
 
-namespace App\Core\Transaction;
+namespace Matican\Core\Transaction;
 
 
 use Guzzle\Http\Client;

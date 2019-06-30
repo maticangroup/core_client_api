@@ -6,7 +6,7 @@
  * Time: 10:12
  */
 
-namespace App\Core\DataTypes;
+namespace Matican\Core\DataTypes;
 
 
 class Hex extends DataTypes

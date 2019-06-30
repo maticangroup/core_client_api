@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Models\Sale;
+namespace Matican\Models\Sale;
 
-use App\Core\Concepts\CRUDActions;
-use App\Models\Delivery\Queue;
-use App\Models\Inventory\Inventory;
-use App\Models\Repository\Person;
-use App\Core\DataTypes\DateTime;
-use App\Core\DataTypes\Text;
+use Matican\Core\Concepts\CRUDActions;
+use Matican\Models\Delivery\Queue;
+use Matican\Models\Inventory\Inventory;
+use Matican\Models\Repository\Person;
+use Matican\Core\DataTypes\DateTime;
+use Matican\Core\DataTypes\Text;
 
 class ShelveDeed extends CRUDActions
 {

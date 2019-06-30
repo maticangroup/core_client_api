@@ -6,7 +6,7 @@
  * Time: 17:50
  */
 
-namespace App\Core\DataTypes;
+namespace Matican\Core\DataTypes;
 
 
 class Phone extends DataTypes

@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Models\Delivery;
+namespace Matican\Models\Delivery;
 
-use App\Core\Concepts\CRUDActions;
-use App\Models\Repository\Person;
-use App\Models\Repository\Size;
-use App\Models\Repository\WeekDays;
-use App\Models\Sale\ShelveDeed;
-use App\Core\DataTypes\Time;
+use Matican\Core\Concepts\CRUDActions;
+use Matican\Models\Repository\Person;
+use Matican\Models\Repository\Size;
+use Matican\Models\Repository\WeekDays;
+use Matican\Models\Sale\ShelveDeed;
+use Matican\Core\DataTypes\Time;
 
 
 class Queue extends CRUDActions

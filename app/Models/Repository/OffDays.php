@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Models\Repository;
+namespace Matican\Models\Repository;
 
 
-use App\Core\Concepts\CRUDActions;
-use App\Core\DataTypes\Date;
-use App\Core\DataTypes\Text;
+use Matican\Core\Concepts\CRUDActions;
+use Matican\Core\DataTypes\Date;
+use Matican\Core\DataTypes\Text;
 
 class OffDays extends CRUDActions
 {

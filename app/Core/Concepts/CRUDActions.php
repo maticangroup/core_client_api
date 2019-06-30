@@ -1,16 +1,16 @@
 <?php
 
-namespace App\Core\Concepts;
+namespace Matican\Core\Concepts;
 
 
-use App\Core\Transaction\Request;
+use Matican\Core\Transaction\Request;
 
 abstract class CRUDActions
 {
 
     /**
      * @param $instance
-     * @return \App\Core\Transaction\Response|string
+     * @return \Matican\Core\Transaction\Response|string
      * @throws \ReflectionException
      */
     public static function new($instance)
@@ -27,7 +27,7 @@ abstract class CRUDActions
     /**
      * @param $modelName
      * @param $modelInstance
-     * @return \App\Core\Transaction\Response|string
+     * @return \Matican\Core\Transaction\Response|string
      * @throws \ReflectionException
      */
     public static function edit($modelName, $modelInstance)
@@ -62,7 +62,7 @@ abstract class CRUDActions
     /**
      * @param $modelName
      * @param $id
-     * @return \App\Core\Transaction\Response|string
+     * @return \Matican\Core\Transaction\Response|string
      */
     public static function fetch($modelName, $id)
     {

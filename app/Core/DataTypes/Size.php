@@ -6,7 +6,7 @@
  * Time: 11:07 AM
  */
 
-namespace App\Core\DataTypes;
+namespace Matican\Core\DataTypes;
 
 
 class Size extends DataTypes
