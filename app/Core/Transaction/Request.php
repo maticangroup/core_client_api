@@ -78,8 +78,6 @@ class Request
             $this->getEntity() . '/' .
             $this->getAction();
         $client = new Client();
-        print_r($url);
-        die;
         try {
             $response = new Response(
                 $client->request(
