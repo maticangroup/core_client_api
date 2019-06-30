@@ -3,7 +3,6 @@
 namespace Matican;
 
 
-
 use Matican\Core\Transaction\Request;
 
 class Application
@@ -12,8 +11,10 @@ class Application
     public static function Start()
     {
 
-        $request = new Request("testServer","testentity","testaction");
-        $request->send();
+        $request = new Request("Repository", "Person", "all");
+        $response = $request->send();
+        print_r($response->getContent());
+        die;
 //        InventoryActions::set_inventory_keeper(1, new Person());
 //       Person::read();
 //        $person = new Person();

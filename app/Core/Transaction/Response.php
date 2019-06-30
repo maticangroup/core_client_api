@@ -9,7 +9,7 @@
 namespace Matican\Core\Transaction;
 
 
-use Guzzle\Http\Client;
+//use Guzzle\Http\Client;
 
 class Response
 {
@@ -32,11 +32,12 @@ class Response
      */
     public function __construct($response)
     {
-        $this->setStatus($response->getStatusCode());
-        $this->setContent($response->getBody());
-//        $this->setMessage($respo)
-//        die;
-//        $this->setStatus()
+
+        $decoded = (array)json_decode($response->getBody());
+        $this->setStatus($decoded['status']);
+        $this->setContent((array)$decoded['response']);
+        $this->setMessage(($decoded['message']) ? $decoded['message'] : " ");
+        return $this;
     }
 
 
@@ -57,17 +58,17 @@ class Response
     }
 
     /**
-     * @return string
+     * @return mixed
      */
-    public function getContent(): string
+    public function getContent(): array
     {
         return $this->content;
     }
 
     /**
-     * @param string $content
+     * @param array $content
      */
-    public function setContent(string $content): void
+    public function setContent(array $content): void
     {
         $this->content = $content;
     }

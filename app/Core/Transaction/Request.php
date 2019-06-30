@@ -89,8 +89,6 @@ class Request
         } catch (GuzzleException $e) {
             return "Could not make connection to the core server";
         }
-
-
     }
 
     /**
