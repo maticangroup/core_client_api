@@ -19,9 +19,5 @@
       "Matican\\": "app/"
     }
   },
-  "extra": {
-    "branch-alias": {
-      "dev-master": "1.1"
-    }
-  }
+  "version": "0.0.2"
 }
