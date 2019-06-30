@@ -16,6 +16,8 @@ class Application
 //        $request->add_query('tsss', 6);
 //        $request->add_query('ttttt', 6);
         $response = $request->send();
+        print_r($response->getContent());
+        die;
 //        print_r($response->getContent());
 //        die;
 //        InventoryActions::set_inventory_keeper(1, new Person());
