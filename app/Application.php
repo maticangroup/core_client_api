@@ -12,7 +12,7 @@ class Application
     public static function Start()
     {
 
-        $request = new Request("Repository", "Person", "fetch");
+        $request = new Request("Repository", "PersonActions", "fetch");
         $request->add_query('id', 3);
 //        $request->add_query('tsss', 6);
 //        $request->add_query('ttttt', 6);
@@ -22,12 +22,12 @@ class Application
         die;
 //        print_r($response->getContent());
 //        die;
-//        InventoryActions::set_inventory_keeper(1, new Person());
-//       Person::read();
-//        $person = new Person();
+//        InventoryActions::set_inventory_keeper(1, new PersonActions());
+//       PersonActions::read();
+//        $person = new PersonActions();
 //        $person->setHumanName("Hossein");
 //        $person->setHumanFamily("Azimi");
-//        Person::add($person);
+//        PersonActions::add($person);
 
         /**
          * @todo Amirhossein please read this
@@ -48,7 +48,7 @@ class Application
         /*
          * 3 - You can also pass an entity to the request and send it to the server
          */
-//        $person = new Person();
+//        $person = new PersonActions();
 //        $person->setEmail(new Email("Azimihossein7@gmail.com"));
 //        $person->setMobile(new Mobile("09120342273"));
 //        $person->setNationalCode(new NationalCode("123456789"));
