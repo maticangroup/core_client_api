@@ -6,7 +6,7 @@
  * Time: 20:39
  */
 
-namespace Core\Transaction;
+namespace Matican\Core\Transaction;
 
 
 class ResponseStatus
