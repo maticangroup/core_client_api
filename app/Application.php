@@ -11,10 +11,13 @@ class Application
     public static function Start()
     {
 
-        $request = new Request("Repository", "Person", "all");
+        $request = new Request("Repository", "Person", "fetch");
+        $request->add_query('id', 3);
+//        $request->add_query('tsss', 6);
+//        $request->add_query('ttttt', 6);
         $response = $request->send();
-        print_r($response->getContent());
-        die;
+//        print_r($response->getContent());
+//        die;
 //        InventoryActions::set_inventory_keeper(1, new Person());
 //       Person::read();
 //        $person = new Person();

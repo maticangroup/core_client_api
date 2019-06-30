@@ -79,11 +79,15 @@ class Request
             $this->getAction();
         $client = new Client();
         try {
+
             $response = new Response(
                 $client->request(
                     $this->getMethod(),
                     $url,
-                    $this->getQueries())
+                    ['query' =>
+                        $this->getQueries()
+                    ]
+                )
             );
             return $response;
         } catch (GuzzleException $e) {
@@ -156,7 +160,7 @@ class Request
         foreach ($this->queries as $query) {
             $enhancedQueriesArray[$query->getKey()] = $query->getValue();
         }
-        return $this->queries;
+        return $enhancedQueriesArray;
     }
 
     /**
