@@ -3,6 +3,7 @@
 namespace Matican;
 
 
+use Core\Transaction\ResponseStatus;
 use Matican\Core\Transaction\Request;
 
 class Application
@@ -16,7 +17,8 @@ class Application
 //        $request->add_query('tsss', 6);
 //        $request->add_query('ttttt', 6);
         $response = $request->send();
-        print_r($response->getContent());
+        $person = $response->getContent();
+        print_r($person);
         die;
 //        print_r($response->getContent());
 //        die;
