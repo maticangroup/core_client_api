@@ -12,6 +12,7 @@
     }
   },
   "require": {
+    "maticangroup/core_client_api": "dev-master",
     "guzzlehttp/guzzle": "^6.3",
     "ext-json": "*"
   },
