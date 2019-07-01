@@ -49,10 +49,6 @@ class DataTypes
 
     public function __toString()
     {
-        /*
-         * This is a test for version auto update
-         *
-         */
         return (string)$this->output;
     }
 }
