@@ -45,7 +45,7 @@ class DataTypes
     /**
      * @return string
      */
-    private function __toString()
+    public function __toString()
     {
         return (string)$this->output;
     }
