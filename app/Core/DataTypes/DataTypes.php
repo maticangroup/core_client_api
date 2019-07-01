@@ -49,6 +49,9 @@ class DataTypes
 
     public function __toString()
     {
+        /*
+         * This is working!!!!
+         */
         return (string)$this->output;
     }
 }
