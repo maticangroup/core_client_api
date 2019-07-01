@@ -50,7 +50,7 @@ class DataTypes
     public function __toString()
     {
         /*
-         * This is working!!!!
+         * YES!!!!! This is working!!!!
          */
         return (string)$this->output;
     }
