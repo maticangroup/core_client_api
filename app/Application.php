@@ -3,8 +3,12 @@
 namespace Matican;
 
 
-use Core\Transaction\ResponseStatus;
+use Matican\Actions\Repository\ItemActions;
+use Matican\Actions\Repository\PersonActions;
+use Matican\Core\Entities\Repository;
+use Matican\Core\Servers;
 use Matican\Core\Transaction\Request;
+use Matican\Core\Transaction\ResponseStatus;
 
 class Application
 {
@@ -12,18 +16,24 @@ class Application
     public static function Start()
     {
 
-        $request = new Request("Repository", "PersonActions", "fetch");
-        $request->add_query('id', 3);
+        $request = new Request(
+            Servers::Delivery,
+            Repository::Item,
+            ItemActions::all
+        );
+//        $response = $request->send();
+
+//        $request->add_query('id', 3);
 //        $request->add_query('tsss', 6);
 //        $request->add_query('ttttt', 6);
-        $response = $request->send();
-        $person = $response->getContent();
-        print_r($person);
-        die;
+//        $response = $request->send();
+//        $person = $response->getContent();
+//        print_r($person);
+//        die;
 //        print_r($response->getContent());
 //        die;
 //        InventoryActions::set_inventory_keeper(1, new PersonActions());
-//       PersonActions::read();
+//        PersonActions::read();
 //        $person = new PersonActions();
 //        $person->setHumanName("Hossein");
 //        $person->setHumanFamily("Azimi");
