@@ -9,9 +9,12 @@
 namespace Matican\Core\DataTypes;
 
 
-class Date  extends DataTypes
+class Date extends DataTypes
 {
     /**
      * @todo Please change this class name to DateTime
+     */
+    /**
+     * Date constructor.
      */
 }

@@ -23,12 +23,13 @@ class DataTypes
     {
         $this->input = $input;
         $this->output = $input;
+        return $this->output;
     }
 
     /**
      * @return mixed
      */
-    public function getInput()
+    private function getInput()
     {
         return $this->input;
     }
@@ -36,7 +37,7 @@ class DataTypes
     /**
      * @param mixed $input
      */
-    public function setInput($input): void
+    private function setInput($input): void
     {
         $this->input = $input;
     }
@@ -44,7 +45,7 @@ class DataTypes
     /**
      * @return string
      */
-    public function __toString()
+    private function __toString()
     {
         return (string)$this->output;
     }
