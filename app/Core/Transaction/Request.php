@@ -79,7 +79,6 @@ class Request
             $this->getAction();
         $client = new Client();
         try {
-
             $response = new Response(
                 $client->request(
                     $this->getMethod(),
@@ -213,6 +212,7 @@ class Request
         $reflection = new ReflectionClass($objectClass);
         $vars = $reflection->getProperties(ReflectionProperty::IS_PRIVATE);
         $optionsArray = [];
+
         foreach ($vars as $var) {
             $propertyName = $var->getName();
             $propertyFinalName = "";
@@ -229,9 +229,20 @@ class Request
                 $propertyFinalName = $var->getName();
             }
             $getterFunctionName = "get" . $propertyFinalName;
+            $value = "There is something wrong with request conversion, please check vendor/maticangroup/core_client_api/app/Core/Transaction/Request.php::232";
+            $objectValue = $object->{$getterFunctionName}();
+//            dd($objectValue);
+            if (is_string($objectValue)) {
+                $value = (string)$object->{$getterFunctionName}();
+            } elseif (is_array($objectValue)) {
+                $value = json_encode($object->{$getterFunctionName}());
+            } else {
+                $value = (string)$object->{$getterFunctionName}();
+            }
+
             $optionsArray[] = [
                 'key' => $propertyFinalName,
-                'value' => (string)$object->{$getterFunctionName}()
+                'value' => $value
             ];
         }
         foreach ($optionsArray as $option) {

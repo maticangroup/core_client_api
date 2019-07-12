@@ -25,4 +25,6 @@ class Repository
     const SpecKey = "SpecKey";
     const SpecKeyValue = "SpecKeyValue";
     const SpecValue = "SpecValue";
+    const Color = "Color";
+    const ItemCategory = "ItemCategory";
 }

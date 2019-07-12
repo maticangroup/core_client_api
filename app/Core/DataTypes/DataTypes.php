@@ -51,7 +51,6 @@ class DataTypes
     {
         /*
          * YES!!!!! This is working!!!!
-         * HAHAHAHAHAH
          */
         return (string)$this->output;
     }
