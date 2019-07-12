@@ -21,4 +21,5 @@ class ResponseStatus
     const not_allowed_file_extension = 105;
     const upload_successful = 106;
     const image_media_fetched_successfully = 107;
+    const record_update_successfully = 108;
 }
