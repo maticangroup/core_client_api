@@ -26,6 +26,8 @@ class Response
      */
     private $message;
 
+    private $redirect;
+
     /**
      * Response constructor.
      * @param $response \GuzzleHttp\Psr7\Response
@@ -35,7 +37,8 @@ class Response
         $decoded = (array)json_decode($response->getBody());
         $this->setStatus($decoded['status']);
         $this->setContent((array)$decoded['response']);
-        $this->setMessage(($decoded['message']) ? $decoded['message'] : " ");
+        $this->setMessage(($decoded['message']) ? $decoded['message'] : "");
+        $this->setRedirect(($decoded['redirect']) ? $decoded['redirect'] : "");
         return $this;
     }
 
@@ -88,5 +91,20 @@ class Response
         $this->message = $message;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getRedirect()
+    {
+        return $this->redirect;
+    }
+
+    /**
+     * @param mixed $redirect
+     */
+    public function setRedirect($redirect): void
+    {
+        $this->redirect = $redirect;
+    }
 
 }
