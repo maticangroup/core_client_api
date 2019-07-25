@@ -119,6 +119,7 @@ class Request
                                 'contents' => fopen($file->getContent(), 'r'),
                             ],
                         ],
+
                         'form_params' => $this->getQueries()
                     ]
                 )
