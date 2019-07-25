@@ -111,6 +111,9 @@ class Request
             $response = new Response(
                 $client->post(
                     $url, [
+                        'headers' => [
+                            'Content-Type' => 'multipart/form-data',
+                        ],
                         'multipart' => [
                             [
                                 'name' => $file->getName(),
@@ -119,8 +122,7 @@ class Request
                                 'contents' => fopen($file->getContent(), 'r'),
                             ],
                         ],
-
-                        'form_params' => $this->getQueries()
+                        'query' => $this->getQueries()
                     ]
                 )
             );
