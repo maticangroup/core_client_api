@@ -125,6 +125,7 @@ class Request
                                 'name' => 'instances',
                                 'contents' => $this->getQueries()
                             ]
+
                         ],
                     ]
                 )
