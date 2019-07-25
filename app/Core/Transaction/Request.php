@@ -121,8 +121,11 @@ class Request
                                 'Mime-Type' => $file->getMimeType(),
                                 'contents' => fopen($file->getContent(), 'r'),
                             ],
+                            [
+                                'name' => 'instances',
+                                'contents' => $this->getQueries()
+                            ]
                         ],
-                        'query' => $this->getQueries()
                     ]
                 )
 
