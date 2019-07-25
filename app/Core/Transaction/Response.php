@@ -30,7 +30,7 @@ class Response
 
     /**
      * Response constructor.
-     * @param $response \GuzzleHttp\Psr7\Response
+     * @param $response
      */
     public function __construct($response)
     {

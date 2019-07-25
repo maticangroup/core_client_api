@@ -21,6 +21,21 @@ class Application
             Repository::Item,
             ItemActions::all
         );
+
+
+
+//        $response = $this->client->post(url('/update_profile'), [
+//            'multipart' => [
+//                [
+//                    'name' => 'image',
+//                    'filename' => $image_org,
+//                    'Mime-Type' => $image_mime,
+//                    'contents' => fopen($image_path, 'r'),
+//                ],
+//            ]
+//        ]);
+
+
 //        $response = $request->send();
 
 //        $request->add_query('id', 3);

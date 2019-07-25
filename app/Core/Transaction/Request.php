@@ -12,8 +12,10 @@ namespace Matican\Core\Transaction;
 use Matican\Core\Config;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
+use Matican\Models\Media\Image;
 use ReflectionClass;
 use ReflectionProperty;
+
 
 class Request
 {
@@ -85,6 +87,39 @@ class Request
                     $url,
                     ['query' =>
                         $this->getQueries()
+                    ]
+                )
+            );
+            return $response;
+        } catch (GuzzleException $e) {
+            return "Could not make connection to the core server";
+        }
+    }
+
+    /**
+     * @param  $file Image
+     * @return mixed
+     */
+    public function uploadImage($file)
+    {
+        $url = $this->getDomain() . '/' .
+            $this->getServer() . '/' .
+            $this->getEntity() . '/' .
+            $this->getAction();
+        $client = new Client();
+        try {
+            $response = new Response(
+                $client->post(
+                    $url, [
+                        'multipart' => [
+                            [
+                                'name' => $file->getName(),
+                                'filename' => $file->getFileName(),
+                                'Mime-Type' => $file->getMimeType(),
+                                'contents' => fopen($file->getContent(), 'r'),
+                            ],
+                        ],
+                        'body' => $this->getQueries()
                     ]
                 )
             );
