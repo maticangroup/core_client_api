@@ -125,6 +125,7 @@ class Request
                         'query' => $this->getQueries()
                     ]
                 )
+
             );
             return $response;
         } catch (GuzzleException $e) {
