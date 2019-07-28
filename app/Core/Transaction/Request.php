@@ -13,6 +13,7 @@ use Matican\Core\Config;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use Matican\Models\Media\Image;
+use Matican\ModelSerializer;
 use ReflectionClass;
 use ReflectionProperty;
 
@@ -100,7 +101,7 @@ class Request
      * @param  $file Image
      * @return mixed
      */
-    public function uploadImage($file)
+    public function uploadImage($file, $instance = null)
     {
         $url = $this->getDomain() . '/' .
             $this->getServer() . '/' .
@@ -108,26 +109,24 @@ class Request
             $this->getAction();
         $client = new Client();
         try {
+            $toBeSendParameters = ['multipart' => []];
+            if ($file) {
+                $toBeSendParameters['multipart'][] = [
+                    'name' => $file->getName(),
+                    'filename' => $file->getFileName(),
+                    'Mime-Type' => $file->getMimeType(),
+                    'contents' => fopen($file->getContent(), 'r'),
+                ];
+            }
+            if ($instance) {
+                $toBeSendParameters['multipart'][] = [
+                    'name' => 'instance',
+                    'contents' => ModelSerializer::reverse($instance, true),
+                ];
+            }
             $response = new Response(
                 $client->post(
-                    $url, [
-                        'headers' => [
-                            'Content-Type' => 'multipart/form-data',
-                        ],
-                        'multipart' => [
-                            [
-                                'name' => $file->getName(),
-                                'filename' => $file->getFileName(),
-                                'Mime-Type' => $file->getMimeType(),
-                                'contents' => fopen($file->getContent(), 'r'),
-                            ],
-                            [
-                                'name' => 'instances',
-                                'contents' => $this->getQueries()
-                            ]
-
-                        ],
-                    ]
+                    $url, $toBeSendParameters
                 )
 
             );
