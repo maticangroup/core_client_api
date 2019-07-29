@@ -9,6 +9,7 @@
 namespace Matican\Core\Transaction;
 
 
+use GuzzleHttp\Psr7\UploadedFile;
 use Matican\Core\Config;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
@@ -98,41 +99,55 @@ class Request
     }
 
     /**
-     * @param  $file Image
+     * @param  $file mixed
+     * @param null $instance
      * @return mixed
      */
     public function uploadImage($file, $instance = null)
     {
-        $url = $this->getDomain() . '/' .
-            $this->getServer() . '/' .
-            $this->getEntity() . '/' .
-            $this->getAction();
-        $client = new Client();
-        try {
-            $toBeSendParameters = ['multipart' => []];
-            if ($file) {
-                $toBeSendParameters['multipart'][] = [
-                    'name' => $file->getName(),
-                    'filename' => $file->getFileName(),
-                    'Mime-Type' => $file->getMimeType(),
-                    'contents' => fopen($file->getContent(), 'r'),
-                ];
-            }
-            if ($instance) {
-                $toBeSendParameters['multipart'][] = [
-                    'name' => 'instance',
-                    'contents' => ModelSerializer::reverse($instance, true),
-                ];
-            }
-            $response = new Response(
-                $client->post(
-                    $url, $toBeSendParameters
-                )
+        if (!$file) {
 
-            );
-            return $response;
-        } catch (GuzzleException $e) {
-            return "Could not make connection to the core server";
+            $image = new Image();
+            $image->setName($file->getClientOriginalName());
+            $image->setContent($file->getPathname());
+            $image->setFileName($file->getPathname());
+            $image->setMimeType($file->getMimeType());
+
+            $url = $this->getDomain() . '/' .
+                $this->getServer() . '/' .
+                $this->getEntity() . '/' .
+                $this->getAction();
+
+            $client = new Client();
+
+            try {
+                $toBeSendParameters = ['multipart' => []];
+                if ($file) {
+                    $toBeSendParameters['multipart'][] = [
+                        'name' => $image->getName(),
+                        'filename' => $image->getFileName(),
+                        'Mime-Type' => $image->getMimeType(),
+                        'contents' => fopen($image->getContent(), 'r'),
+                    ];
+                }
+                if ($instance) {
+                    $toBeSendParameters['multipart'][] = [
+                        'name' => 'instance',
+                        'contents' => ModelSerializer::reverse($instance, true),
+                    ];
+                }
+                $response = new Response(
+                    $client->post(
+                        $url, $toBeSendParameters
+                    )
+                );
+                return $response;
+            } catch (GuzzleException $e) {
+                return "Could not make connection to the core server";
+            }
+
+        } else {
+            return false;
         }
     }
 
