@@ -11,6 +11,10 @@ namespace Matican;
 
 class ModelSerializer
 {
+
+
+
+
     /**
      * @param $json
      * @param $class
