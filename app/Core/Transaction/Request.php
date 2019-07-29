@@ -105,49 +105,44 @@ class Request
      */
     public function uploadImage($file, $instance = null)
     {
-        if (!$file) {
 
-            $image = new Image();
-            $image->setName($file->getClientOriginalName());
-            $image->setContent($file->getPathname());
-            $image->setFileName($file->getPathname());
-            $image->setMimeType($file->getMimeType());
+        $image = new Image();
+        $image->setName($file->getClientOriginalName());
+        $image->setContent($file->getPathname());
+        $image->setFileName($file->getPathname());
+        $image->setMimeType($file->getMimeType());
 
-            $url = $this->getDomain() . '/' .
-                $this->getServer() . '/' .
-                $this->getEntity() . '/' .
-                $this->getAction();
+        $url = $this->getDomain() . '/' .
+            $this->getServer() . '/' .
+            $this->getEntity() . '/' .
+            $this->getAction();
 
-            $client = new Client();
+        $client = new Client();
 
-            try {
-                $toBeSendParameters = ['multipart' => []];
-                if ($file) {
-                    $toBeSendParameters['multipart'][] = [
-                        'name' => $image->getName(),
-                        'filename' => $image->getFileName(),
-                        'Mime-Type' => $image->getMimeType(),
-                        'contents' => fopen($image->getContent(), 'r'),
-                    ];
-                }
-                if ($instance) {
-                    $toBeSendParameters['multipart'][] = [
-                        'name' => 'instance',
-                        'contents' => ModelSerializer::reverse($instance, true),
-                    ];
-                }
-                $response = new Response(
-                    $client->post(
-                        $url, $toBeSendParameters
-                    )
-                );
-                return $response;
-            } catch (GuzzleException $e) {
-                return "Could not make connection to the core server";
+        try {
+            $toBeSendParameters = ['multipart' => []];
+            if ($file) {
+                $toBeSendParameters['multipart'][] = [
+                    'name' => $image->getName(),
+                    'filename' => $image->getFileName(),
+                    'Mime-Type' => $image->getMimeType(),
+                    'contents' => fopen($image->getContent(), 'r'),
+                ];
             }
-
-        } else {
-            return false;
+            if ($instance) {
+                $toBeSendParameters['multipart'][] = [
+                    'name' => 'instance',
+                    'contents' => ModelSerializer::reverse($instance, true),
+                ];
+            }
+            $response = new Response(
+                $client->post(
+                    $url, $toBeSendParameters
+                )
+            );
+            return $response;
+        } catch (GuzzleException $e) {
+            return "Could not make connection to the core server";
         }
     }
 
