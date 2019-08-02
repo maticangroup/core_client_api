@@ -107,11 +107,12 @@ class Request
     {
 
         $image = new Image();
-        $image->setName($file->getClientOriginalName());
-        $image->setContent($file->getPathname());
-        $image->setFileName($file->getPathname());
-        $image->setMimeType($file->getMimeType());
-
+        if ($file) {
+            $image->setName($file->getClientOriginalName());
+            $image->setContent($file->getPathname());
+            $image->setFileName($file->getPathname());
+            $image->setMimeType($file->getMimeType());
+        }
         $url = $this->getDomain() . '/' .
             $this->getServer() . '/' .
             $this->getEntity() . '/' .
