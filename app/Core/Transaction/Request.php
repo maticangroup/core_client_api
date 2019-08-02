@@ -106,13 +106,7 @@ class Request
     public function uploadImage($file, $instance = null)
     {
 
-        $image = new Image();
-        if ($file) {
-            $image->setName($file->getClientOriginalName());
-            $image->setContent($file->getPathname());
-            $image->setFileName($file->getPathname());
-            $image->setMimeType($file->getMimeType());
-        }
+
         $url = $this->getDomain() . '/' .
             $this->getServer() . '/' .
             $this->getEntity() . '/' .
@@ -123,6 +117,12 @@ class Request
         try {
             $toBeSendParameters = ['multipart' => []];
             if ($file) {
+                $image = new Image();
+                $image->setName($file->getClientOriginalName());
+                $image->setContent($file->getPathname());
+                $image->setFileName($file->getPathname());
+                $image->setMimeType($file->getMimeType());
+
                 $toBeSendParameters['multipart'][] = [
                     'name' => $image->getName(),
                     'filename' => $image->getFileName(),
