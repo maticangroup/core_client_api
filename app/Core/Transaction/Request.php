@@ -8,7 +8,7 @@
 
 namespace Matican\Core\Transaction;
 
-
+use App\ClientConfig;
 use GuzzleHttp\Psr7\UploadedFile;
 use Matican\Core\Config;
 use GuzzleHttp\Client;
@@ -82,6 +82,12 @@ class Request
             $this->getEntity() . '/' .
             $this->getAction();
         $client = new Client();
+
+
+        $this->add_query('client_ip', ClientConfig::CLIENT_IP);
+        $this->add_query('client_key', ClientConfig::CLIENT_ACCESS_TOKEN);
+
+
         try {
             $response = new Response(
                 $client->request(
@@ -130,6 +136,16 @@ class Request
                     'contents' => fopen($image->getContent(), 'r'),
                 ];
             }
+            $toBeSendParameters['multipart'][] = [
+                'name' => 'client_ip',
+                'contents' => ClientConfig::CLIENT_IP
+            ];
+            $toBeSendParameters['multipart'][] = [
+                'name' => 'client_key',
+                'contents' => ClientConfig::CLIENT_ACCESS_TOKEN
+            ];
+
+
             if ($instance) {
                 $toBeSendParameters['multipart'][] = [
                     'name' => 'instance',
