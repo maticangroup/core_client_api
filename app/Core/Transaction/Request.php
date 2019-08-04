@@ -9,6 +9,7 @@
 namespace Matican\Core\Transaction;
 
 //use App\ClientConfig;
+use App\ClientConfig;
 use GuzzleHttp\Psr7\UploadedFile;
 use Matican\Core\Config;
 use GuzzleHttp\Client;
@@ -83,11 +84,10 @@ class Request
             $this->getAction();
         $client = new Client();
 
-
-        $this->add_query('client_ip', (class_exists("App\ClientConfig\ClientConfig")) ?
+        $this->add_query('client_ip', (class_exists("\App\ClientConfig")) ?
             \App\ClientConfig::CLIENT_IP :
             \SRC\ClientConfig\ClientConfig::CLIENT_IP);
-        $this->add_query('client_key', (class_exists("App\ClientConfig\ClientConfig")) ?
+        $this->add_query('client_key', (class_exists("\App\ClientConfig")) ?
             \App\ClientConfig::CLIENT_ACCESS_TOKEN :
             \SRC\ClientConfig\ClientConfig::CLIENT_ACCESS_TOKEN);
 
@@ -112,6 +112,7 @@ class Request
      * @param  $file mixed
      * @param null $instance
      * @return mixed | Response
+     * @throws \ReflectionException
      */
     public function uploadImage($file, $instance = null)
     {
@@ -142,13 +143,13 @@ class Request
             }
             $toBeSendParameters['multipart'][] = [
                 'name' => 'client_ip',
-                'contents' => (class_exists("App\ClientConfig\ClientConfig")) ?
+                'contents' => (class_exists("\App\ClientConfig")) ?
                     \App\ClientConfig::CLIENT_IP :
                     \SRC\ClientConfig\ClientConfig::CLIENT_IP
             ];
             $toBeSendParameters['multipart'][] = [
                 'name' => 'client_key',
-                'contents' => (class_exists("App\ClientConfig\ClientConfig")) ?
+                'contents' => (class_exists("\App\ClientConfig")) ?
                     \App\ClientConfig::CLIENT_ACCESS_TOKEN :
                     \SRC\ClientConfig\ClientConfig::CLIENT_ACCESS_TOKEN
 
