@@ -6,7 +6,7 @@
  * Time: 11:31 AM
  */
 
-namespace App\FormModels\Authentication;
+namespace Matican\FormModels\Authentication;
 
 
 class UserModel

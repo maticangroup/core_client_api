@@ -6,7 +6,7 @@
  * Time: 11:01 AM
  */
 
-namespace App\FormModels\Notification;
+namespace Matican\FormModels\Notification;
 
 
 class TokenModel

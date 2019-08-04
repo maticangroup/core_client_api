@@ -6,7 +6,7 @@
  * Time: 5:59 PM
  */
 
-namespace App\FormModels\CRM;
+namespace Matican\FormModels\CRM;
 
 
 class CustomerCouponModel

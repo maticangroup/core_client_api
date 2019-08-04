@@ -6,7 +6,7 @@
  * Time: 3:49 PM
  */
 
-namespace App\FormModels\CRM;
+namespace Matican\FormModels\CRM;
 
 
 class CustomerGroupStatusModel

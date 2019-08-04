@@ -6,7 +6,7 @@
  * Time: 12:44 PM
  */
 
-namespace App\FormModels\Notification;
+namespace Matican\FormModels\Notification;
 
 
 class SMSTemplateModel

@@ -6,7 +6,7 @@
  * Time: 12:58 PM
  */
 
-namespace App\FormModels\Repository;
+namespace Matican\FormModels\Repository;
 
 
 class CompanyAddEmployeeModel

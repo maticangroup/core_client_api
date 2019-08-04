@@ -6,7 +6,7 @@
  * Time: 10:45 PM
  */
 
-namespace App\FormModels\Repository;
+namespace Matican\FormModels\Repository;
 
 
 class BrandSupplierModel

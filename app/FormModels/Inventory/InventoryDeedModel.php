@@ -6,7 +6,7 @@
  * Time: 2:29 PM
  */
 
-namespace App\FormModels\Inventory;
+namespace Matican\FormModels\Inventory;
 
 
 class InventoryDeedModel

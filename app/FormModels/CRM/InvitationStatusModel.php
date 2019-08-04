@@ -6,7 +6,7 @@
  * Time: 6:28 PM
  */
 
-namespace App\FormModels\CRM;
+namespace Matican\FormModels\CRM;
 
 
 class InvitationStatusModel

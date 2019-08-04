@@ -6,7 +6,7 @@
  * Time: 11:43 AM
  */
 
-namespace App\FormModels\Delivery;
+namespace Matican\FormModels\Delivery;
 
 
 class DistrictModel

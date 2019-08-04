@@ -6,7 +6,7 @@
  * Time: 3:59 PM
  */
 
-namespace App\FormModels\Inventory;
+namespace Matican\FormModels\Inventory;
 
 
 class ShelveItemProductsModel

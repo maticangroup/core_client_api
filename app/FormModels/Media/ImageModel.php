@@ -6,7 +6,7 @@
  * Time: 13:51
  */
 
-namespace App\FormModels\Media;
+namespace Matican\FormModels\Media;
 
 
 class ImageModel

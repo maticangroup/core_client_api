@@ -6,7 +6,7 @@
  * Time: 6:16 PM
  */
 
-namespace App\FormModels\Sale;
+namespace Matican\FormModels\Sale;
 
 
 class OfferGroupStatusModel

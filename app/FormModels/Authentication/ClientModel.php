@@ -6,7 +6,7 @@
  * Time: 4:15 PM
  */
 
-namespace App\FormModels\Authentication;
+namespace Matican\FormModels\Authentication;
 
 
 class ClientModel

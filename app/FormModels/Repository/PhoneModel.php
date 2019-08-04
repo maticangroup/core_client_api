@@ -6,7 +6,7 @@
  * Time: 1:14 PM
  */
 
-namespace App\FormModels\Repository;
+namespace Matican\FormModels\Repository;
 
 
 class PhoneModel

@@ -6,7 +6,7 @@
  * Time: 2:44 PM
  */
 
-namespace App\FormModels\Repository;
+namespace Matican\FormModels\Repository;
 
 
 class ProductModel

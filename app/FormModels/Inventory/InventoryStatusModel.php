@@ -6,7 +6,7 @@
  * Time: 11:59 AM
  */
 
-namespace App\FormModels\Inventory;
+namespace Matican\FormModels\Inventory;
 
 
 class InventoryStatusModel

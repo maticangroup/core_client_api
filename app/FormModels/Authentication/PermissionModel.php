@@ -6,7 +6,7 @@
  * Time: 6:10 PM
  */
 
-namespace App\FormModels\Authentication;
+namespace Matican\FormModels\Authentication;
 
 
 class PermissionModel

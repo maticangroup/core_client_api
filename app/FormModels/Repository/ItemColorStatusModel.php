@@ -6,7 +6,7 @@
  * Time: 11:18 AM
  */
 
-namespace App\FormModels\Repository;
+namespace Matican\FormModels\Repository;
 
 
 class ItemColorStatusModel

@@ -6,7 +6,7 @@
  * Time: 10:29 AM
  */
 
-namespace App\FormModels\Delivery;
+namespace Matican\FormModels\Delivery;
 
 
 class DispatchDeliveryStatusModel

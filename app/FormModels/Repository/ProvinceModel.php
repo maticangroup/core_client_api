@@ -6,7 +6,7 @@
  * Time: 9:59 AM
  */
 
-namespace App\FormModels\Repository;
+namespace Matican\FormModels\Repository;
 
 
 class ProvinceModel

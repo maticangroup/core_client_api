@@ -6,7 +6,7 @@
  * Time: 7:10 PM
  */
 
-namespace App\FormModels\Repository;
+namespace Matican\FormModels\Repository;
 
 
 class SpecGroupModel

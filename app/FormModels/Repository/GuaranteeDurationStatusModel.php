@@ -6,7 +6,7 @@
  * Time: 3:26 PM
  */
 
-namespace App\FormModels\Repository;
+namespace Matican\FormModels\Repository;
 
 
 class GuaranteeDurationStatusModel

@@ -6,7 +6,7 @@
  * Time: 1:01 PM
  */
 
-namespace App\FormModels\Repository;
+namespace Matican\FormModels\Repository;
 
 
 use Matican\Core\DataTypes\Date;

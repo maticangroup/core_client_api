@@ -6,7 +6,7 @@
  * Time: 10:16 AM
  */
 
-namespace App\FormModels\Repository;
+namespace Matican\FormModels\Repository;
 
 
 class CategorySpecKeyModel

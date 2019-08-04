@@ -6,7 +6,7 @@
  * Time: 5:50 PM
  */
 
-namespace App\FormModels\Repository;
+namespace Matican\FormModels\Repository;
 
 
 class ForbiddenWordsModel

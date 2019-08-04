@@ -6,7 +6,7 @@
  * Time: 10:12 PM
  */
 
-namespace App\FormModels\Sale;
+namespace Matican\FormModels\Sale;
 
 
 class PricingDeedStatusModel

@@ -6,7 +6,7 @@
  * Time: 6:54 PM
  */
 
-namespace App\FormModels\Ticketing;
+namespace Matican\FormModels\Ticketing;
 
 
 class CommentModel

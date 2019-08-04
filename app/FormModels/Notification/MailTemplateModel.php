@@ -6,7 +6,7 @@
  * Time: 12:13 PM
  */
 
-namespace App\FormModels\Notification;
+namespace Matican\FormModels\Notification;
 
 
 class MailTemplateModel

@@ -6,7 +6,7 @@
  * Time: 5:43 PM
  */
 
-namespace App\FormModels\Delivery;
+namespace Matican\FormModels\Delivery;
 
 
 class DeliveryPersonStatusModel

@@ -6,7 +6,7 @@
  * Time: 4:34 PM
  */
 
-namespace App\FormModels\Repository;
+namespace Matican\FormModels\Repository;
 
 
 class SizeStatusModel

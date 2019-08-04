@@ -6,7 +6,7 @@
  * Time: 10:41 AM
  */
 
-namespace App\FormModels\Notification;
+namespace Matican\FormModels\Notification;
 
 
 class ClientMessageModel

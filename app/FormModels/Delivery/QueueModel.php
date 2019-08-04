@@ -6,7 +6,7 @@
  * Time: 11:35 AM
  */
 
-namespace App\FormModels\Delivery;
+namespace Matican\FormModels\Delivery;
 
 
 class QueueModel

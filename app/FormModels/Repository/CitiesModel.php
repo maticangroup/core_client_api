@@ -6,7 +6,7 @@
  * Time: 12:30 PM
  */
 
-namespace App\FormModels\Repository;
+namespace Matican\FormModels\Repository;
 
 
 class CitiesModel

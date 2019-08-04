@@ -6,7 +6,7 @@
  * Time: 10:28 AM
  */
 
-namespace App\FormModels\Sale;
+namespace Matican\FormModels\Sale;
 
 
 class OrderStatusModel
