@@ -84,8 +84,12 @@ class Request
         $client = new Client();
 
 
-        $this->add_query('client_ip', ClientConfig::CLIENT_IP);
-        $this->add_query('client_key', ClientConfig::CLIENT_ACCESS_TOKEN);
+        $this->add_query('client_ip', (class_exists("App\ClientConfig\ClientConfig")) ?
+            App\ClientConfig\ClientConfig::CLIENT_IP :
+            SRC\ClientConfig\ClientConfig::CLIENT_IP);
+        $this->add_query('client_key', (class_exists("App\ClientConfig\ClientConfig")) ?
+            App\ClientConfig\ClientConfig::CLIENT_ACCESS_TOKEN :
+            SRC\ClientConfig\ClientConfig::CLIENT_ACCESS_TOKEN);
 
 
         try {
