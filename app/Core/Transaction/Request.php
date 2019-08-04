@@ -107,7 +107,7 @@ class Request
     /**
      * @param  $file mixed
      * @param null $instance
-     * @return mixed
+     * @return mixed | Response
      */
     public function uploadImage($file, $instance = null)
     {

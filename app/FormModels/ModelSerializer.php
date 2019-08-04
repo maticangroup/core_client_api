@@ -2,19 +2,15 @@
 /**
  * Created by PhpStorm.
  * User: hossein
- * Date: 28/07/19
- * Time: 12:07
+ * Date: 01/07/19
+ * Time: 16:53
  */
 
-namespace Matican;
+namespace App\FormModels;
 
 
 class ModelSerializer
 {
-
-
-
-
     /**
      * @param $json
      * @param $class
@@ -35,12 +31,6 @@ class ModelSerializer
         }
     }
 
-    /**
-     * @param $model
-     * @param bool $toJson
-     * @return array|false|string
-     * @throws \ReflectionException
-     */
     public static function reverse($model, $toJson = false)
     {
         $className = get_class($model);
