@@ -85,10 +85,10 @@ class Request
 
 
         $this->add_query('client_ip', (class_exists("App\ClientConfig\ClientConfig")) ?
-            \App\ClientConfig\ClientConfig::CLIENT_IP :
+            \App\ClientConfig::CLIENT_IP :
             \SRC\ClientConfig\ClientConfig::CLIENT_IP);
         $this->add_query('client_key', (class_exists("App\ClientConfig\ClientConfig")) ?
-            \App\ClientConfig\ClientConfig::CLIENT_ACCESS_TOKEN :
+            \App\ClientConfig::CLIENT_ACCESS_TOKEN :
             \SRC\ClientConfig\ClientConfig::CLIENT_ACCESS_TOKEN);
 
 
@@ -143,13 +143,13 @@ class Request
             $toBeSendParameters['multipart'][] = [
                 'name' => 'client_ip',
                 'contents' => (class_exists("App\ClientConfig\ClientConfig")) ?
-                    \App\ClientConfig\ClientConfig::CLIENT_IP :
+                    \App\ClientConfig::CLIENT_IP :
                     \SRC\ClientConfig\ClientConfig::CLIENT_IP
             ];
             $toBeSendParameters['multipart'][] = [
                 'name' => 'client_key',
                 'contents' => (class_exists("App\ClientConfig\ClientConfig")) ?
-                    \App\ClientConfig\ClientConfig::CLIENT_ACCESS_TOKEN :
+                    \App\ClientConfig::CLIENT_ACCESS_TOKEN :
                     \SRC\ClientConfig\ClientConfig::CLIENT_ACCESS_TOKEN
 
             ];
