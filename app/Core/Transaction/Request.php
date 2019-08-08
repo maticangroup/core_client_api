@@ -10,6 +10,7 @@ namespace Matican\Core\Transaction;
 
 //use App\ClientConfig;
 use App\ClientConfig;
+use App\General\AuthUser;
 use GuzzleHttp\Psr7\UploadedFile;
 use Matican\Core\Config;
 use GuzzleHttp\Client;
@@ -84,13 +85,18 @@ class Request
             $this->getAction();
         $client = new Client();
 
+
         $this->add_query('client_ip', (class_exists("\App\ClientConfig")) ?
             \App\ClientConfig::CLIENT_IP :
             \SRC\ClientConfig\ClientConfig::CLIENT_IP);
         $this->add_query('client_key', (class_exists("\App\ClientConfig")) ?
             \App\ClientConfig::CLIENT_ACCESS_TOKEN :
             \SRC\ClientConfig\ClientConfig::CLIENT_ACCESS_TOKEN);
-
+        if (class_exists("\App\General\AuthUser")) {
+            if (AuthUser::current_user()) {
+                $this->add_query('current_user', AuthUser::current_user()->getUserPassword());
+            }
+        }
 
         try {
             $response = new Response(
@@ -154,8 +160,17 @@ class Request
                     \SRC\ClientConfig\ClientConfig::CLIENT_ACCESS_TOKEN
 
             ];
-
-
+            /**
+             * @todo AutUser should move to ClientAPI
+             */
+            if (class_exists("\App\General\AuthUser")) {
+                if (AuthUser::current_user()) {
+                    $toBeSendParameters['multipart'][] = [
+                        'name' => 'current_user',
+                        'contents' => AuthUser::current_user()->getUserPassword()
+                    ];
+                }
+            }
             if ($instance) {
                 $toBeSendParameters['multipart'][] = [
                     'name' => 'instance',
