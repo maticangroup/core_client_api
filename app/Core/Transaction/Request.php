@@ -9,15 +9,16 @@
 namespace Matican\Core\Transaction;
 
 //use App\ClientConfig;
-use App\ClientConfig;
-use App\General\AuthUser;
-use GuzzleHttp\Psr7\UploadedFile;
+//use App\ClientConfig;
+
+use Matican\Authentication\AuthUser;
 use Matican\Core\Config;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 
 use Matican\Core\Image;
 use Matican\ModelSerializer;
+use Matican\Settings;
 use ReflectionClass;
 use ReflectionProperty;
 
@@ -87,16 +88,16 @@ class Request
         $client = new Client();
 
 
-        $this->add_query('client_ip', (class_exists("\App\ClientConfig")) ?
-            \App\ClientConfig::CLIENT_IP :
-            \SRC\ClientConfig\ClientConfig::CLIENT_IP);
-        $this->add_query('client_key', (class_exists("\App\ClientConfig")) ?
-            \App\ClientConfig::CLIENT_ACCESS_TOKEN :
-            \SRC\ClientConfig\ClientConfig::CLIENT_ACCESS_TOKEN);
-        if (class_exists("\App\General\AuthUser")) {
-            if (AuthUser::current_user()) {
-                $this->add_query('current_user', AuthUser::current_user()->getUserPassword());
-            }
+        $this->add_query('client_ip', Settings::get('CLIENT_IP'));
+
+
+        $this->add_query('client_key', Settings::get('CLIENT_ACCESS_TOKEN'));
+
+
+//        if (class_exists("\App\General\AuthUser")) {
+        if (AuthUser::current_user()) {
+            $this->add_query('current_user', AuthUser::current_user()->getUserPassword());
+//            }
         }
 
         try {
@@ -150,27 +151,17 @@ class Request
             }
             $toBeSendParameters['multipart'][] = [
                 'name' => 'client_ip',
-                'contents' => (class_exists("\App\ClientConfig")) ?
-                    \App\ClientConfig::CLIENT_IP :
-                    \SRC\ClientConfig\ClientConfig::CLIENT_IP
+                'contents' => Settings::get('CLIENT_IP')
             ];
             $toBeSendParameters['multipart'][] = [
                 'name' => 'client_key',
-                'contents' => (class_exists("\App\ClientConfig")) ?
-                    \App\ClientConfig::CLIENT_ACCESS_TOKEN :
-                    \SRC\ClientConfig\ClientConfig::CLIENT_ACCESS_TOKEN
-
+                'contents' => Settings::get('CLIENT_ACCESS_TOKEN')
             ];
-            /**
-             * @todo AutUser should move to ClientAPI
-             */
-            if (class_exists("\App\General\AuthUser")) {
-                if (AuthUser::current_user()) {
-                    $toBeSendParameters['multipart'][] = [
-                        'name' => 'current_user',
-                        'contents' => AuthUser::current_user()->getUserPassword()
-                    ];
-                }
+            if (AuthUser::current_user()) {
+                $toBeSendParameters['multipart'][] = [
+                    'name' => 'current_user',
+                    'contents' => AuthUser::current_user()->getUserPassword()
+                ];
             }
             if ($instance) {
                 $toBeSendParameters['multipart'][] = [
