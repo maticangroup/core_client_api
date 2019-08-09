@@ -13,8 +13,6 @@ class ModelSerializer
 {
 
 
-
-
     /**
      * @param $json
      * @param $class
@@ -22,6 +20,7 @@ class ModelSerializer
      */
     public static function parse($json, $class)
     {
+
         $properties = (array)json_decode(json_encode($json));
         if (class_exists($class)) {
             $classInstance = new $class();

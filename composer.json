@@ -13,7 +13,9 @@
   },
   "require": {
     "guzzlehttp/guzzle": "^6.3",
-    "ext-json": "*"
+    "ext-json": "*",
+    "symfony/filesystem": "^3.4",
+    "maticangroup/core_models": "v8"
   },
   "autoload": {
     "psr-4": {
