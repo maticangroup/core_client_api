@@ -14,7 +14,6 @@
   "require": {
     "guzzlehttp/guzzle": "^6.3",
     "ext-json": "*",
-    "symfony/filesystem": "*",
     "maticangroup/core_models": "v8"
   },
   "autoload": {
