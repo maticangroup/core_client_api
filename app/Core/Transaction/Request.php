@@ -62,7 +62,7 @@ class Request
      */
     public function __construct(string $server, string $entity, string $action)
     {
-        $this->setDomain(Config::SERVER_DOMAIN);
+        $this->setDomain(Settings::get('SERVER_DOMAIN'));
         $this->setServer($server);
         $this->setEntity($entity);
         $this->setAction($action);
