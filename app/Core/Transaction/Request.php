@@ -15,7 +15,8 @@ use GuzzleHttp\Psr7\UploadedFile;
 use Matican\Core\Config;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
-use Matican\Models\Media\Image;
+
+use Matican\Core\Image;
 use Matican\ModelSerializer;
 use ReflectionClass;
 use ReflectionProperty;
