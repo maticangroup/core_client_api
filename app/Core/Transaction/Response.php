@@ -34,7 +34,7 @@ class Response
      */
     public function __construct($response)
     {
-        $decoded = (array)json_decode($response->getBody());
+        $decoded = (array)json_decode($response->getBody()->getContents());
         $this->setStatus($decoded['status']);
         $this->setContent((array)$decoded['response']);
         $this->setMessage(($decoded['message']) ? $decoded['message'] : "");
