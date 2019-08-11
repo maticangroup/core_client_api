@@ -11,6 +11,8 @@ namespace Matican\Core\Transaction;
 
 //use Guzzle\Http\Client;
 
+use Matican\Settings;
+
 class Response
 {
     /**
@@ -26,7 +28,6 @@ class Response
      */
     private $message;
 
-    private $redirect;
 
     /**
      * Response constructor.
@@ -34,11 +35,28 @@ class Response
      */
     public function __construct($response)
     {
-        $decoded = (array)json_decode($response->getBody()->getContents());
-        $this->setStatus($decoded['status']);
-        $this->setContent((array)$decoded['response']);
+        $decoded = json_decode($response->getBody()->getContents(), true);
+        if (isset($decoded['status']))
+            $this->setStatus($decoded['status']);
+        else
+            $this->setStatus(null);
+        if (isset($decoded['response']))
+            $this->setContent((array)$decoded['response']);
+        else
+            $this->setContent(null);
+
         $this->setMessage(($decoded['message']) ? $decoded['message'] : "");
-        $this->setRedirect(($decoded['redirect']) ? $decoded['redirect'] : "");
+
+        if ($this->getStatus() === \Matican\ResponseStatus::authentication_session_expired) {
+            if (Settings::get('LOGIN_PAGE_URL')) {
+                header(
+                    'Location: http://' .
+                    Settings::get('APPLICATION_DOMAIN') . '/' .
+                    Settings::get('LOGIN_PAGE_URL')
+                );
+                die;
+            }
+        }
         return $this;
     }
 
@@ -89,22 +107,6 @@ class Response
     public function setMessage(string $message): void
     {
         $this->message = $message;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getRedirect()
-    {
-        return $this->redirect;
-    }
-
-    /**
-     * @param mixed $redirect
-     */
-    public function setRedirect($redirect): void
-    {
-        $this->redirect = $redirect;
     }
 
 }

@@ -12,7 +12,6 @@ namespace Matican\Core\Transaction;
 //use App\ClientConfig;
 
 use Matican\Authentication\AuthUser;
-use Matican\Core\Config;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 
