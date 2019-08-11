@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "7bd15ea773712c419b627c65b8cbcdd9",
+    "content-hash": "9beba6d613068a9992ad351f4ef47cb7",
     "packages": [
         {
             "name": "guzzlehttp/guzzle",
@@ -195,7 +195,7 @@
         },
         {
             "name": "maticangroup/core_models",
-            "version": "v17",
+            "version": "v18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/maticangroup/core_view_models.git",
