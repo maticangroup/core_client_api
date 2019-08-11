@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "9beba6d613068a9992ad351f4ef47cb7",
+    "content-hash": "fdd7f637e887e9c88f9a8b5a9561f080",
     "packages": [
         {
             "name": "guzzlehttp/guzzle",
@@ -195,22 +195,22 @@
         },
         {
             "name": "maticangroup/core_models",
-            "version": "v18",
+            "version": "v19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/maticangroup/core_view_models.git",
-                "reference": "3d9e014a14de8d598ce2a3a0caa0fcf9821c147c"
+                "reference": "9850048818e1a97830629449104cc68040a76083"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/maticangroup/core_view_models/zipball/3d9e014a14de8d598ce2a3a0caa0fcf9821c147c",
-                "reference": "3d9e014a14de8d598ce2a3a0caa0fcf9821c147c",
+                "url": "https://api.github.com/repos/maticangroup/core_view_models/zipball/9850048818e1a97830629449104cc68040a76083",
+                "reference": "9850048818e1a97830629449104cc68040a76083",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "php": "^7.1.3",
-                "symfony/filesystem": "v4.2.*"
+                "symfony/filesystem": "4.3.*"
             },
             "type": "library",
             "autoload": {
@@ -228,7 +228,7 @@
                     "email": "maticangroup@gmail.com"
                 }
             ],
-            "time": "2019-08-11T14:17:01+00:00"
+            "time": "2019-08-11T18:50:58+00:00"
         },
         {
             "name": "psr/http-message",
@@ -322,16 +322,16 @@
         },
         {
             "name": "symfony/filesystem",
-            "version": "v4.2.11",
+            "version": "v4.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
-                "reference": "1bd7aed2932cedd1c2c6cc925831dd8d57ea14bf"
+                "reference": "b9896d034463ad6fd2bf17e2bf9418caecd6313d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/1bd7aed2932cedd1c2c6cc925831dd8d57ea14bf",
-                "reference": "1bd7aed2932cedd1c2c6cc925831dd8d57ea14bf",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/b9896d034463ad6fd2bf17e2bf9418caecd6313d",
+                "reference": "b9896d034463ad6fd2bf17e2bf9418caecd6313d",
                 "shasum": ""
             },
             "require": {
@@ -341,7 +341,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.2-dev"
+                    "dev-master": "4.3-dev"
                 }
             },
             "autoload": {
@@ -368,7 +368,7 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "https://symfony.com",
-            "time": "2019-06-26T06:46:55+00:00"
+            "time": "2019-06-23T08:51:25+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
