@@ -80,7 +80,7 @@ class Response
     /**
      * @return mixed
      */
-    public function getContent(): array
+    public function getContent()
     {
         return $this->content;
     }
@@ -88,7 +88,7 @@ class Response
     /**
      * @param array $content
      */
-    public function setContent(array $content): void
+    public function setContent($content): void
     {
         $this->content = $content;
     }
