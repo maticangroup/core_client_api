@@ -12,6 +12,7 @@ namespace Matican\Authentication;
 use Matican\Core\Entities\Authentication;
 use Matican\Core\Servers;
 use Matican\Models\Authentication\UserModel;
+use Matican\ModelSerializer;
 use Matican\Settings;
 use Symfony\Component\Filesystem\Filesystem;
 use Matican\Core\Transaction\Request as Req;
@@ -21,7 +22,7 @@ class AuthUser
     public static function login($userModel)
     {
         @session_start();
-        $_SESSION['user'] = $userModel;
+        $_SESSION['user'] = ModelSerializer::reverse($userModel, true);
         return true;
     }
 
@@ -31,7 +32,7 @@ class AuthUser
     public static function current_user()
     {
         if (isset($_SESSION['user'])) {
-            return $_SESSION['user'];
+            return ModelSerializer::parse($_SESSION['user'], UserModel::class);
         } else {
             return false;
         }
