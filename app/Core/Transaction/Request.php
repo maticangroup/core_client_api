@@ -93,10 +93,8 @@ class Request
         $this->add_query('client_key', Settings::get('CLIENT_ACCESS_TOKEN'));
 
 
-//        if (class_exists("\App\General\AuthUser")) {
-        if (AuthUser::current_user()) {
+        if (AuthUser::current_user() !== false) {
             $this->add_query('current_user', AuthUser::current_user()->getUserPassword());
-//            }
         }
 
         try {

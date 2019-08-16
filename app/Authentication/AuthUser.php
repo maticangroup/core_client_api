@@ -106,17 +106,27 @@ class AuthUser
     {
         @session_start();
         $currentUser = AuthUser::current_user();
-        if ($_SERVER) {
-            if (isset($_SERVER['REQUEST_URI']) && $_SERVER['REQUEST_URI'] != Settings::get('LOGIN_PAGE_URL')) {
-//            if (isset($_SERVER['REQUEST_URI']) && $_SERVER['REQUEST_URI'] != Params::loginPageUrl()) {
-//            dd('Location: http://' . Params::get('APPLICATION_DOMAIN') . Params::loginPageUrl());
-                if (!$currentUser) {
-//                die("sss");
-//                dd(Params::get('APPLICATION_DOMAIN') . Params::loginPageUrl());
-//                die;
-                    header('Location: http://' . Settings::get('APPLICATION_DOMAIN') . Settings::get('LOGIN_PAGE_URL'));
-//                    header('Location: http://' . Params::get('APPLICATION_DOMAIN') . Params::loginPageUrl());
-                    die;
+        if (!$currentUser) {
+            if ($_SERVER) {
+                if (isset($_SERVER['REQUEST_URI'])) {
+
+                    if (strpos($_SERVER['REQUEST_URI'], Settings::get('LOGIN_PAGE_URL')) !== false) {
+                        /*
+                        * DO NOTHING
+                        */
+                    } else {
+                        $redirectURL = Settings::get('APPLICATION_DOMAIN') .
+                            Settings::get('LOGIN_PAGE_URL');
+
+                        if (isset($_REQUEST['reseller_token'])) {
+                            $redirectURL .= "?reseller_token=" . $_REQUEST['reseller_token'];
+                        }
+
+                        header(
+                            'Location: ' . $redirectURL
+                        );
+                        die;
+                    }
                 }
             }
         }
