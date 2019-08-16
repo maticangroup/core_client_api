@@ -52,7 +52,7 @@ class Query
     /**
      * @return string
      */
-    public function getValue(): string
+    public function getValue()
     {
         return $this->value;
     }
@@ -60,7 +60,7 @@ class Query
     /**
      * @param string $value
      */
-    public function setValue(string $value): void
+    public function setValue($value): void
     {
         $this->value = $value;
     }

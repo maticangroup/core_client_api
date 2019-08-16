@@ -94,8 +94,10 @@ class Request
 
 
         if (AuthUser::current_user() !== false) {
+// dd(AuthUser::current_user());
             $this->add_query('current_user', AuthUser::current_user()->getUserPassword());
         }
+
 
         try {
             $response = new Response(
@@ -114,7 +116,7 @@ class Request
     }
 
     /**
-     * @param  $file mixed
+     * @param $file mixed
      * @param null $instance
      * @return mixed | Response
      * @throws \ReflectionException
@@ -314,7 +316,7 @@ class Request
             $getterFunctionName = "get" . $propertyFinalName;
             $value = "There is something wrong with request conversion, please check vendor/maticangroup/core_client_api/app/Core/Transaction/Request.php::232";
             $objectValue = $object->{$getterFunctionName}();
-//            dd($objectValue);
+// dd($objectValue);
             if (is_string($objectValue)) {
                 $value = (string)$object->{$getterFunctionName}();
             } elseif (is_array($objectValue)) {
