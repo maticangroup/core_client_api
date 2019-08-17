@@ -50,9 +50,7 @@ class Response
         if ($this->getStatus() === \Matican\ResponseStatus::authentication_session_expired) {
             if (Settings::get('LOGIN_PAGE_URL')) {
                 header(
-                    'Location: http://' .
-                    Settings::get('APPLICATION_DOMAIN') .
-                    Settings::get('LOGIN_PAGE_URL')
+                    'Location: '.Settings::get('BACK_OFFICE_LOGIN_URL')
                 );
                 die;
             }

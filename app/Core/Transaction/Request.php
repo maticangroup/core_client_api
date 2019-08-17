@@ -95,7 +95,7 @@ class Request
 
         if (AuthUser::current_user() !== false) {
 // dd(AuthUser::current_user());
-            $this->add_query('current_user', AuthUser::current_user()->getUserPassword());
+            $this->add_query('userPassword', AuthUser::current_user()->getUserPassword());
         }
 
 
@@ -158,7 +158,7 @@ class Request
             ];
             if (AuthUser::current_user()) {
                 $toBeSendParameters['multipart'][] = [
-                    'name' => 'current_user',
+                    'name' => 'userPassword',
                     'contents' => AuthUser::current_user()->getUserPassword()
                 ];
             }
