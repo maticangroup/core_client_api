@@ -31,9 +31,15 @@ class AuthUser
      */
     public static function current_user()
     {
+
         if (isset($_SESSION['user'])) {
-            $jsonUser = json_decode($_SESSION['user'], true);
-            $user = ModelSerializer::parse($jsonUser, UserModel::class);
+            if (is_object($_SESSION['user'])) {
+                $user = $_SESSION['user'];
+            } else {
+                $jsonUser = json_decode($_SESSION['user'], true);
+                $user = ModelSerializer::parse($jsonUser, UserModel::class);
+            }
+
             return $user;
         } else {
             return false;
