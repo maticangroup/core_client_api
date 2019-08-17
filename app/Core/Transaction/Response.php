@@ -51,7 +51,7 @@ class Response
             if (Settings::get('LOGIN_PAGE_URL')) {
                 header(
                     'Location: http://' .
-                    Settings::get('APPLICATION_DOMAIN') . '/' .
+                    Settings::get('APPLICATION_DOMAIN') .
                     Settings::get('LOGIN_PAGE_URL')
                 );
                 die;
