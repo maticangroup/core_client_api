@@ -170,7 +170,8 @@ class Request
             }
             $response = new Response(
                 $client->post(
-                    $url, $toBeSendParameters
+                    $url,
+                    $toBeSendParameters
                 )
             );
             return $response;

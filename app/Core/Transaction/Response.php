@@ -31,7 +31,7 @@ class Response
 
     /**
      * Response constructor.
-     * @param $response \GuzzleHttp\Psr7\Response
+     * @param $response
      */
     public function __construct($response)
     {
@@ -50,7 +50,7 @@ class Response
         if ($this->getStatus() === \Matican\ResponseStatus::authentication_session_expired) {
             if (Settings::get('LOGIN_PAGE_URL')) {
                 header(
-                    'Location: '.Settings::get('BACK_OFFICE_LOGIN_URL')
+                    'Location: ' . Settings::get('BACK_OFFICE_LOGIN_URL')
                 );
                 die;
             }
