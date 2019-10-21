@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "6ee49c68c1d65795288f518f218fbb66",
+    "content-hash": "71316712d776a2fa38f4e609282703f3",
     "packages": [
         {
             "name": "guzzlehttp/guzzle",
@@ -195,16 +195,16 @@
         },
         {
             "name": "maticangroup/core_models",
-            "version": "v37",
+            "version": "v38",
             "source": {
                 "type": "git",
                 "url": "https://github.com/maticangroup/core_view_models.git",
-                "reference": "45bc59a0d9abbab1dbb6f91347676acbc7c80894"
+                "reference": "ed977d22ae37bbf1f854b62fa57c7fe435c93a95"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/maticangroup/core_view_models/zipball/45bc59a0d9abbab1dbb6f91347676acbc7c80894",
-                "reference": "45bc59a0d9abbab1dbb6f91347676acbc7c80894",
+                "url": "https://api.github.com/repos/maticangroup/core_view_models/zipball/ed977d22ae37bbf1f854b62fa57c7fe435c93a95",
+                "reference": "ed977d22ae37bbf1f854b62fa57c7fe435c93a95",
                 "shasum": ""
             },
             "require": {
@@ -228,7 +228,7 @@
                     "email": "maticangroup@gmail.com"
                 }
             ],
-            "time": "2019-10-21T11:05:16+00:00"
+            "time": "2019-10-21T12:12:56+00:00"
         },
         {
             "name": "psr/http-message",
