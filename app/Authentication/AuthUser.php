@@ -76,7 +76,7 @@ class AuthUser
 
     public static function getPermissions()
     {
-        return file_get_contents(Params::get('PERMISSION_CACHE_FILE'));
+        return file_get_contents(Settings::get('PERMISSIONS_CACHE_FILE'));
     }
 
     public static function cachePermissions($permissionsJson)
@@ -142,7 +142,11 @@ class AuthUser
 
     public static function purge_role_permissions()
     {
-        $rolePermissionRequest = new Req(Servers::Authentication, Authentication::Role, 'get_roles_permissions');
+        $rolePermissionRequest = new Req(
+            Servers::Authentication,
+            Authentication::Role,
+            'get_roles_permissions'
+        );
         $response = $rolePermissionRequest->send();
         AuthUser::cachePermissions($response->getContent());
     }
