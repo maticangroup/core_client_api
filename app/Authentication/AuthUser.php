@@ -53,7 +53,7 @@ class AuthUser
     public static function if_is_allowed($action)
     {
 
-        return true;
+//        return true;
         /**
          * @var $currentUser UserModel
          */
@@ -86,7 +86,7 @@ class AuthUser
 
         $cacheFilePath = Settings::get('PERMISSIONS_CACHE_FILE');
 //        $cacheFilePath = Params::get('PERMISSION_CACHE_FILE');
-        $cacheFileDir = Settings::get('PERMISSION_CACHE_DIR');;
+        $cacheFileDir = Settings::get('PERMISSION_CACHE_DIR');
 //        $cacheFileDir = Params::get('PERMISSION_CACHE_DIR');
 
         if (!$fileSystem->exists($cacheFilePath)) {
