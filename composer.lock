@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "c23858ce413c6c37ba60b3776d842d9d",
+    "content-hash": "f6c2945259b88755b39a1ae144c6dd80",
     "packages": [
         {
             "name": "guzzlehttp/guzzle",
@@ -195,16 +195,16 @@
         },
         {
             "name": "maticangroup/core_models",
-            "version": "v40",
+            "version": "v41",
             "source": {
                 "type": "git",
                 "url": "https://github.com/maticangroup/core_view_models.git",
-                "reference": "e40e407e19d1de0ccabb1fb1697ecc5618fb1dd7"
+                "reference": "f02d6c8a54f8e05cde9f89d9f5ec23b3ed8a8976"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/maticangroup/core_view_models/zipball/e40e407e19d1de0ccabb1fb1697ecc5618fb1dd7",
-                "reference": "e40e407e19d1de0ccabb1fb1697ecc5618fb1dd7",
+                "url": "https://api.github.com/repos/maticangroup/core_view_models/zipball/f02d6c8a54f8e05cde9f89d9f5ec23b3ed8a8976",
+                "reference": "f02d6c8a54f8e05cde9f89d9f5ec23b3ed8a8976",
                 "shasum": ""
             },
             "require": {
@@ -228,7 +228,7 @@
                     "email": "maticangroup@gmail.com"
                 }
             ],
-            "time": "2019-10-23T06:04:27+00:00"
+            "time": "2019-11-10T07:00:56+00:00"
         },
         {
             "name": "psr/http-message",
@@ -322,7 +322,7 @@
         },
         {
             "name": "symfony/filesystem",
-            "version": "v4.3.5",
+            "version": "v4.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
