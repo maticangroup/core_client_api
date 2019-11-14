@@ -15,7 +15,7 @@
     "php": "^7.1.3",
     "guzzlehttp/guzzle": "^6.3",
     "ext-json": "*",
-    "maticangroup/core_models": "v50"
+    "maticangroup/core_models": "v51"
   },
   "autoload": {
     "psr-4": {
