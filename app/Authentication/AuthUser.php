@@ -53,7 +53,7 @@ class AuthUser
     public static function if_is_allowed($action)
     {
 
-        return true;
+//        return true;
         /**
          * @var $currentUser UserModel
          */
